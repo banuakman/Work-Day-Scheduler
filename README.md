@@ -1,21 +1,19 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
-## Your Task
+This is a simple calendar application that allows a user to save events for each hour of the day.
+This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Summary
+A day planner with an ten-hour work day created with HTML and CSS and Javascript documents 
+The event entries are saved to local storage
+Retrieve the saved events from local storage
+moment.js utilized for time calculation and formatting conversion
 
-You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
+## Mock-Up
 
-  * [Luxon](https://moment.github.io/luxon/)
+The following animation demonstrates the application functionality:
 
-  * [Day.js](https://day.js.org/)
-
-  * [date-fns](https://date-fns.org/)
-
-  * [js-Joda](https://js-joda.github.io/js-joda/)
-
-Whichever library you choose, be sure to read the documentation carefully!
-
+![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
 
 ## User Story
 
@@ -24,7 +22,6 @@ AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
-
 
 ## Acceptance Criteria
 
@@ -45,61 +42,14 @@ THEN the saved events persist
 ```
 
 
-## Mock-Up
+You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
 
-The following animation demonstrates the application functionality:
+  * [Luxon](https://moment.github.io/luxon/)
 
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
+  * [Day.js](https://day.js.org/)
 
+  * [date-fns](https://date-fns.org/)
 
-## Grading Requirements
+  * [js-Joda](https://js-joda.github.io/js-joda/)
 
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+Whichever library you choose, be sure to read the documentation carefully!
