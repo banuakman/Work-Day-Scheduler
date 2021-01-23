@@ -14,11 +14,23 @@ var startHour = 8
 $("#currentDay").text(curTime.format("dddd, MMMM Do YYYY,  h:mm a"));
 
 // generate all the time rows startHour + workingHours
+function generateSlots() {
     // Create // Build // Place
+    // .time-block
+    var olElement = $("<ol>");
+    olElement.attr("class", "time-block");
+    $('div.container').append(olElement);
+    //row (- for loop)
+     for (var i = startHour; i < startHour + workingHours; i++) {
+        var liElement = $("<li>");
+        liElement.attr("class", "row");
+        $('ol').append(liElement);
+     }
     // label
     // text area
     // save button
-    
+}
+generateSlots()
 // change color class according to curTime 
 
 // USER INTERRACTIONS ==============================================
