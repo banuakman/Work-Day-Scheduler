@@ -4,6 +4,7 @@
 // DATA ============================================================
 // //global variable? starting data?
 var curTime = moment();
+var currentHour = moment().hours();
 var workingHours = 9;
 var startHour = 8
 
@@ -45,7 +46,8 @@ function generateSlots() {
         // textarea
          var textElement = $("<textarea>");
                 textElement.attr({
-                'class': "col-10"
+                "class": "col-10",
+                "data-hour": h, //time slot hour
                 });
         
         // save button .saveBtn
@@ -58,10 +60,23 @@ function generateSlots() {
         liElement.append(label).append(textElement).append(saveBtn);
      }
 
-
 }
+
 generateSlots()
+
 // change color class according to curTime 
+$("textarea").each(function () {
+    // convert data-hour attribute to an integer
+    var blockHour = parseInt($(this).attr("data-hour"));
+    // if statement to change block color based on hour of day
+    if (blockHour < currentHour) {
+        $(this).addClass("past");
+    } else if (blockHour === currentHour) {
+        $(this).addClass("present");
+    } else {
+        $(this).addClass("future");
+        }
+    });
 
 // USER INTERRACTIONS ==============================================
 
