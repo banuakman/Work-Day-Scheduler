@@ -42,16 +42,20 @@ function generateSlots() {
             label.attr("class", "col-1 hour");
             label.text(tag);
 
-        // text area
+        // textarea
          var textElement = $("<textarea>");
                 textElement.attr({
                 'class': "col-10"
                 });
         
-        // save button
-
+        // save button .saveBtn
+            var saveBtn = $('<button>');
+                 saveBtn.attr("class", "col-1 saveBtn");
+                //font awesome save icon
+                saveBtn.html("<i class='fa fa-save'></i>")
+    
         // append label + text area + saveButton
-        liElement.append(label).append(textElement)
+        liElement.append(label).append(textElement).append(saveBtn);
      }
 
 
