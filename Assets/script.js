@@ -39,15 +39,19 @@ function generateSlots() {
         
         // label .hour (css) .col-1 (bootstrap)
         var label = $("<label>");
-            label.attr("class", "col hour");
+            label.attr("class", "col-1 hour");
             label.text(tag);
 
         // text area
-
+         var textElement = $("<textarea>");
+                textElement.attr({
+                'class': "col-10"
+                });
+        
         // save button
 
         // append label + text area + saveButton
-        liElement.append(label)
+        liElement.append(label).append(textElement)
      }
 
 
