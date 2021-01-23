@@ -81,7 +81,12 @@ $("textarea").each(function () {
 // USER INTERRACTIONS ==============================================
 
 // On click to Save Button Save to Local Storage
-
+$(".saveBtn").on("click", function(){
+        var index = $(".saveBtn").index(this);
+        console.log(index)
+        
+        // localStorage.setItem("tasks", JSON.stringify(tasks));
+  });
 
 
 
