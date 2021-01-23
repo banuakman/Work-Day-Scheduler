@@ -64,7 +64,7 @@ function generateSlots() {
 
 generateSlots()
 
-// change color class according to curTime 
+// change color class according to currentHour
 $("textarea").each(function () {
     // convert data-hour attribute to an integer
     var blockHour = parseInt($(this).attr("data-hour"));
