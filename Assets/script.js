@@ -1,11 +1,10 @@
 // DEPENDENCIES ====================================================
 // // DOM elements that you need to connect
 
-
 // DATA ============================================================
 // //global variable? starting data?
 var curTime = moment();
-var workingHours = 10;
+var workingHours = 9;
 var startHour = 8
 
 // FUNCTIONS =======================================================
@@ -20,15 +19,38 @@ function generateSlots() {
     var olElement = $("<ol>");
     olElement.attr("class", "time-block");
     $('div.container').append(olElement);
-    //row (- for loop)
+    // run a loop
      for (var i = startHour; i < startHour + workingHours; i++) {
+        // .row
         var liElement = $("<li>");
         liElement.attr("class", "row");
         $('ol').append(liElement);
+        
+        // time tags
+        var tag = '';
+            var h = i % 24;
+            if (h < 12) {
+                tag = h + "AM";
+            } else if (h == 12) {
+                tag = h + "PM";
+            } else {
+                tag = (h - 12) + "PM";
+            }
+        
+        // label .hour (css) .col-1 (bootstrap)
+        var label = $("<label>");
+            label.attr("class", "col hour");
+            label.text(tag);
+
+        // text area
+
+        // save button
+
+        // append label + text area + saveButton
+        liElement.append(label)
      }
-    // label
-    // text area
-    // save button
+
+
 }
 generateSlots()
 // change color class according to curTime 
